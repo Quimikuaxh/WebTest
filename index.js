@@ -5,11 +5,11 @@ const port = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.sendFile(path.join(__dirname,'/index.html'));
 })
 
 app.get('/iframe.html', (req, res) => {
-    res.sendFile(path.join(__dirname+'/iframe.html'));
+    res.sendFile(path.join(__dirname,'/iframe.html'));
 })
 
 app.listen(port, () => {
