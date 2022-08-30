@@ -53,13 +53,16 @@
         document.getElementById("files_uploaded").textContent = filenames;
     }
 
-    function uploadFiles(number) {
+    function severalClicks(number) {
         document.getElementById("several-text-"+number).textContent = "Clicked!";
     }
             
 </script>
 </head>
 <body>
+    <h1>
+        Upload File block
+    </h1>
     <div class="upload-container">
         <input type="file" id="file_upload" multiple />
     </div>
@@ -70,10 +73,14 @@
     </div>
     <br />
     <br />
+    <h1>
+        Several Clicks block
+    </h1>
     <div class="1-buttons-container">
         <button class="several-btn" id="several-btn-1" onclick="severalClicks(1)">Submit</button>
         <span id="several-text-1"></span> 
     </div>
+    <br />
     <div class="2-buttons-container">
         <button class="several-btn" id="several-btn-2" onclick="severalClicks(2)">Submit</button>
         <span id="several-text-2"></span> 
@@ -85,12 +92,17 @@
     </div>
     <br />
     <br />
-    <br />
+    <h1>
+        Download File block
+    </h1>
     <div class="download-container">
         <a class="download-btn" href="data:text/plain,this is some text" download="file.txt">Download link</a>
     </div>
     <br />
     <br />
+    <h1>
+        Iframe
+    </h1>
     <iframe class="iframe-container" src="./pages/iframe.html" height="400" width="750" title="Iframe Example"></iframe>
 </body>
 </html>
