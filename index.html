@@ -52,6 +52,10 @@
         }
         document.getElementById("files_uploaded").textContent = filenames;
     }
+
+    function uploadFiles(number) {
+        document.getElementById("several-text-"+number).textContent = "Clicked!";
+    }
             
 </script>
 </head>
@@ -64,6 +68,22 @@
         <button class="upload-btn" id="upload-btn" onclick="uploadFiles()">Submit</button>
         <span id="files_uploaded">File names are going to be displayed here.</span> 
     </div>
+    <br />
+    <br />
+    <div class="1-buttons-container">
+        <button class="several-btn" id="several-btn-1" onclick="severalClicks(1)">Submit</button>
+        <span id="several-text-1"></span> 
+    </div>
+    <div class="2-buttons-container">
+        <button class="several-btn" id="several-btn-2" onclick="severalClicks(2)">Submit</button>
+        <span id="several-text-2"></span> 
+    </div>
+    <br />
+    <div class="3-buttons-container">
+        <button class="several-btn" id="several-btn-3" onclick="severalClicks(3)">Submit</button>
+        <span id="several-text-3"></span> 
+    </div>
+    <br />
     <br />
     <br />
     <div class="download-container">
