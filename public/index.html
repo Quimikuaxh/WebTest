@@ -56,6 +56,19 @@
     function severalClicks(number) {
         document.getElementById("several-text-"+number).textContent = "Clicked!";
     }
+
+    function delayAction(time){
+        var promise = new Promise(resolve => setTimeout(resolve, time))
+        var newBr = document.createElement("br");
+        var newElement = document.createElement("span");
+        var newText = document.createTextNode("Delay finished!");
+        promise.then(() => {
+            newElement.appendChild(newText);
+            document.getElementById("delay-container")
+            .insertAdjacentElement("beforeend", newElement)
+            .insertAdjacentElement("beforeend", newBr);
+        });
+    }
             
 </script>
 </head>
@@ -91,6 +104,15 @@
         <span id="several-text-3"></span> 
     </div>
     <br />
+    <br />
+    <h1>
+        Delay block
+    </h1>
+    <div class="delay-container" id="delay-container">
+        <button class="delay-btn" id="delay-btn" onclick="delayAction(15000)">Submit</button>
+        <br />
+        <br />
+    </div>
     <br />
     <h1>
         Download File block
