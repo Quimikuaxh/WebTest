@@ -69,6 +69,12 @@
             .insertAdjacentElement("beforeend", newBr);
         });
     }
+    function fillTextWithDelay(time){
+        var promise = new Promise(resolve => setTimeout(resolve, time))
+        promise.then(() => {
+            document.getElementById("filled-span").textContent = "Delay finished!"
+        });
+    }
             
 </script>
 </head>
@@ -109,9 +115,10 @@
         Delay block
     </h1>
     <div class="delay-container" id="delay-container">
-        <button class="delay-btn" id="delay-btn" onclick="delayAction(15000)">Submit</button>
+        <button class="delay-btn" id="delay-btn" onclick="fillTextWithDelay(15000)">Submit</button>
         <br />
         <br />
+        <span id="filled-span">Not Clicked</span>
     </div>
     <br />
     <h1>
