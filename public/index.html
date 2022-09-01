@@ -53,6 +53,10 @@
         document.getElementById("files_uploaded").textContent = filenames;
     }
 
+    function clicked() {
+        document.getElementById("hidden-span").textContent = "Clicked!";
+    }
+
     function severalClicks(number) {
         document.getElementById("several-text-"+number).textContent = "Clicked!";
     }
@@ -119,6 +123,16 @@
         <br />
         <br />
         <span id="filled-span">Not Clicked</span>
+    </div>
+    <br />
+    <h1>
+        Invisible button block
+    </h1>
+    <div class="invisible-button-container" id="invisible-container">
+        <button hidden class="invisible-btn" id="invisible-btn" onclick="clicked()">Submit</button>
+        <br />
+        <br />
+        <span id="hidden-span">Not Clicked</span>
     </div>
     <br />
     <h1>
